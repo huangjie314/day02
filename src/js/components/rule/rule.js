@@ -27,7 +27,6 @@ class Rule extends Component {
             isShow: true
         }, ()=>{
             callback && callback.call(this);
-            console.log(111);
         })
     }
 
