@@ -1,0 +1,53 @@
+
+@charset 'utf-8';
+@import '../../../sass/helper/_util.scss';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: rem(112);
+    background: #fff;
+    display: flex;
+    z-index: 9;
+    animation: repaint .5s forwards;
+    transform-origin: left bottom;
+    div {
+        flex: 1;
+        text-align: center;
+        font-size: rem(24);
+        padding-top: rem(127);
+        margin-top: rem(-65);
+        height: rem(140);
+    }
+    div.active{
+        color: red;
+        font-weight: 600;
+        
+    }
+    .item1 {
+        background: url(../../../images/footer/active1.png) center no-repeat;
+        background-size:rem(140);
+     
+    }
+    .item2 {
+        background: url(../../../images/footer/item2.png) center no-repeat;
+        background-size: rem(140);
+    }
+    .item3 {
+        background: url(../../../images/footer//active3.png) center no-repeat;
+        background-size: rem(140); 
+    }
+
+}
+@keyframes repaint {
+    0% {
+        transform: translateZ(1px) scale(0,0);
+    }
+    100% {
+        transform: translateZ(1px) scale(1,1);
+
+    }
+}

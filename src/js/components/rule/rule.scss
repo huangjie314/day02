@@ -1,0 +1,135 @@
+@charset 'utf-8';
+@import "../../../sass/helper/_util.scss";
+@import "../../../sass/helper/_variables.scss";
+@import "../../../sass/helper/_swiper-3.4.2.scss";
+
+.rule{
+    position: fixed;
+    @include pos(0,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    .mask-bg {
+        position: absolute;
+        @include pos(0,0,0,0);
+        background: rgba(0,0,0,.8);
+        z-index: 1;
+    }
+    .mask-body {
+        @include wh(626, 800);
+        background: #fff;
+        padding: rem(57) 0 0 rem(24);
+        border-radius: rem(18);
+        position: relative;
+        z-index: 99;
+        .mask-title {
+            position: absolute;
+            @include bg("../../../images/rule/rule_tit.png");
+            @include wh(439,64);
+            top: rem(-39);
+            left: rem(85);
+            text-align: center;
+            font-size: rem(36);
+            line-height: 1.3rem;
+            color: #fff;
+            font-weight: 600;
+        }
+        .mask-content {
+            padding: rem(13) rem(72) 0 rem(24);
+            height: rem(650);
+            position: relative;
+            .rule-nav {
+                position: absolute;
+                right: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                span {
+                    border-radius: rem(5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 1.23733rem;
+                    height: 2.96533rem;
+                    font-size: rem(24);
+                    padding:0 rem(15);
+                    margin-bottom: rem(5);
+                    box-shadow: 0 rem(3) rem(18) 0 rgba(138, 212, 167, 0.75);
+                    background-image: linear-gradient( 101deg, rgb(69,176,95) 0, rgb(152,230,144) 100%);
+                    line-height: 1;
+                    &.cur{
+                        color: #44a956;
+                        background: #f2fff5;
+                    }
+                }
+            }
+            .rule-swiper{
+                width: 100%;
+                z-index: 2;
+                height: rem(630);
+                background: #f2fff5;
+                .swiper-slide{
+                    width: 100%;
+                }
+                ul{
+                    li{
+                        position: relative;
+                        padding: 0 rem(45) rem(30) rem(71);
+                        line-height: rem(45);
+                        color: #575757;
+                        font-size: rem(24);
+                        text-align: justify;
+                        span{
+                            color: #44a956;
+                            font-size: rem(30);
+                            position: absolute;
+                            top: 0;
+                            left: rem(35);
+                        }
+                    }
+                }
+                .txt1{
+                    padding-top: 1rem;
+                }
+                .txt2{
+                    padding-top: rem(30);
+                    li{
+                        padding-right: rem(70);
+                    }
+                }
+                .ruletxt-swiper{
+                    height: rem(600);
+                    .swiper-slide{
+                        height: auto;
+                    }
+                    .swiper-scrollbar{
+                        height: rem(591);
+                        top: rem(9);
+                        right: rem(29);
+                        background:#cdf4d6;
+                        width: rem(11);
+                    }
+                    .swiper-scrollbar-drag{
+                        background: #44a956;
+                    }
+                }
+            }
+        }
+        .rule-tips{
+            color: #575757;
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            width: 1.536rem;
+            height: 1.536rem;
+            background: url(../../../images/rule/close.png) center top no-repeat;
+            background-size:100%;
+            bottom: -2.13333rem;
+            left: 50%;
+            margin-left: -0.768rem
+            
+        }
+    }
+}

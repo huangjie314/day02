@@ -1,0 +1,48 @@
+@function rem($px){
+  @return ($px*16/750)*1rem
+}
+@mixin bg($url){
+  @if $url!=''{
+    background: url($url) center top no-repeat;
+  }
+  @else{
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  background-size: 100%;
+}
+@mixin wh($w,$h){
+  width: rem($w);
+  height: rem($h);
+}
+@mixin pos($top,$right,$bottom,$left){
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+.prc-share{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.85);
+  animation: prc-share-zoomIn .25s forwards;
+  .prc-share-img{
+    margin: 0 auto;
+    position: relative;
+    top: 1rem;
+  }
+}
+@keyframes prc-share-zoomIn{
+  0%{
+    opacity: 0;
+    transform: scale(.95) translateZ(1px);
+  }
+  100%{
+    opacity: 1;
+    transform:scale(1) translateZ(1px);
+  }
+}
